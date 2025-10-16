@@ -23,7 +23,7 @@ class LoginView extends StatelessWidget {
         backgroundColor: AppColors.primary,
         body: Center(
           child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 12),
+            padding: const EdgeInsets.symmetric(horizontal: 20),
             child: Form(
               key: formKey,
               child: Column(
@@ -77,6 +77,7 @@ class LoginView extends StatelessWidget {
                   ),
 
                   Gap(20),
+
                   /// Sign Up text
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -90,18 +91,18 @@ class LoginView extends StatelessWidget {
                       Gap(8),
 
                       GestureDetector(
-                        onTap: (){
+                        onTap: () {
                           print('Sign Up');
                         },
                         child: CustomText(
                           text: 'Sign Up',
                           size: 14,
                           color: AppColors.white,
-                            decoration: TextDecoration.underline,
-                            weight: FontWeight.w700,
+                          decoration: TextDecoration.underline,
+                          weight: FontWeight.w700,
                         ),
                       ),
-                    ]
+                    ],
                   ),
                 ],
               ),

@@ -22,7 +22,12 @@ class CustomAuthBtn extends StatelessWidget {
           backgroundColor: AppColors.white,
         ),
         onPressed: onPressed,
-        child: CustomText(text: text, color: AppColors.primary, size: 18,weight: FontWeight.w500,),
+        child: CustomText(
+          text: text,
+          color: AppColors.primary,
+          size: 18,
+          weight: FontWeight.w500,
+        ),
       ),
     );
   }

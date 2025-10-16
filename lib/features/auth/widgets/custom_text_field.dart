@@ -49,6 +49,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
         filled: true,
         fillColor: Colors.white,
         hintText: widget.hintText,
+        hintStyle: TextStyle(color: Colors.grey.shade600, fontSize: 14),
         suffixIcon: widget.isPassword
             ? IconButton(onPressed: () => _togglePasswordVisibility(), icon: Icon(Icons.remove_red_eye))
             :  null,
