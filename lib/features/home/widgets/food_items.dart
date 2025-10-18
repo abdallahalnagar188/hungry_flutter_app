@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart' ;
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
-
 import '../../../core/constance/app_images.dart';
 import '../../../core/routes/app_routes.dart';
 import 'card_item.dart';
@@ -30,7 +28,7 @@ class FoodItems extends StatelessWidget {
           crossAxisCount: 2,
           crossAxisSpacing: 10,
           mainAxisSpacing: 10,
-          childAspectRatio: 0.75,
+          childAspectRatio: 0.8,
         ),
       ),
     );
