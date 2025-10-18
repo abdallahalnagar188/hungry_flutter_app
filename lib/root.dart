@@ -42,12 +42,15 @@ class _RootState extends State<Root> {
       ),
 
       bottomNavigationBar: Container(
+        margin: EdgeInsets.symmetric(horizontal: 10 ,vertical: 10),
         padding: EdgeInsets.symmetric(horizontal: 10,vertical: 8),
         decoration: BoxDecoration(
           color: AppColors.primary,
           borderRadius:  BorderRadius.only(
             topLeft: Radius.circular(20),
             topRight: Radius.circular(20),
+            bottomLeft: Radius.circular(20),
+            bottomRight: Radius.circular(20),
           ),
         ),
         child: BottomNavigationBar(

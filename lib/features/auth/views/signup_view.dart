@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
-
 import '../../../core/constance/app_colors.dart';
 import '../../../core/constance/app_images.dart';
-import '../../../shared/custom_text.dart';
 import '../widgets/custom_auth_btn.dart';
 import '../widgets/custom_text_field.dart';
 
@@ -96,35 +94,7 @@ class SignupView extends StatelessWidget {
                       }
                     },
                   ),
-
                   Gap(20),
-
-                  // /// Sign Up text
-                  // Row(
-                  //   mainAxisAlignment: MainAxisAlignment.center,
-                  //   children: [
-                  //     CustomText(
-                  //       text: 'Don\'t have an account?',
-                  //       size: 14,
-                  //       color: AppColors.white,
-                  //       weight: FontWeight.w500,
-                  //     ),
-                  //     Gap(8),
-                  //
-                  //     GestureDetector(
-                  //       onTap: () {
-                  //         print('Sign Up');
-                  //       },
-                  //       child: CustomText(
-                  //         text: 'Sign Up',
-                  //         size: 14,
-                  //         color: AppColors.white,
-                  //         decoration: TextDecoration.underline,
-                  //         weight: FontWeight.w700,
-                  //       ),
-                  //     ),
-                  //   ],
-                  // ),
                 ],
               ),
             ),

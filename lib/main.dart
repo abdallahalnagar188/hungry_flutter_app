@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:hungry_flutter_app/features/auth/views/login_view.dart';
-import 'package:hungry_flutter_app/features/auth/views/signup_view.dart';
+import 'package:hungry_flutter_app/features/home/views/home_view.dart';
 import 'package:hungry_flutter_app/root.dart';
-import 'package:hungry_flutter_app/splash.dart';
 
 void main() {
   runApp(const MyApp());
