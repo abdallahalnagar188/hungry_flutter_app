@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart' ;
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 
 import '../../../core/constance/app_images.dart';
+import '../../../core/routes/app_routes.dart';
 import 'card_item.dart';
 
 class FoodItems extends StatelessWidget {
@@ -18,6 +21,9 @@ class FoodItems extends StatelessWidget {
             title: 'Pizza',
             desc: 'Lorem ipsum dolor sit amet,',
             rate: '4.5',
+            onPressed: () {
+              Get.toNamed(AppRoutes.productDetails);
+            },
           );
         }),
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
