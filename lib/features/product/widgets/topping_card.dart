@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-
-import 'package:flutter/material.dart';
+import 'package:hungry_flutter_app/shared/custom_text.dart';
+import '../../../core/constance/app_colors.dart';
 
 class ToppingCard extends StatelessWidget {
   final String imagePath;
@@ -8,100 +8,96 @@ class ToppingCard extends StatelessWidget {
   final VoidCallback? onAdd;
 
   const ToppingCard({
-    Key? key,
+    super.key,
     required this.imagePath,
     required this.title,
     this.onAdd,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 85,
-      height: 100,
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(32),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.black.withOpacity(0.1),
-            blurRadius: 20,
-            offset: const Offset(0, 10),
-          ),
-        ],
-      ),
-      child: Column(
+      width: 90,
+      margin: const EdgeInsets.only(right: 15,top: 4),
+      child: Stack(
+        clipBehavior: Clip.none,
         children: [
-          // Image Container
+          /// Brown background container with text and add button
           Container(
-            decoration: const BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(32),
-                topRight: Radius.circular(32),
-              ),
+            margin: const EdgeInsets.only(top: 45),
+            padding: const EdgeInsets.only(top: 40, left: 8, right: 8, bottom: 8),
+            decoration: BoxDecoration(
+              color: AppColors.brown,
+              borderRadius: BorderRadius.circular(15),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.grey.withOpacity(0.25),
+                  spreadRadius: 2,
+                  blurRadius: 5,
+                  offset: const Offset(0, 3),
+                ),
+              ],
             ),
-            child: Center(
-              child: Image.asset(
-                imagePath,
-                height: 100,
-                width: 100,
-                fit: BoxFit.contain,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Flexible(
+                  child: CustomText(
+                    text: title,
+                    color: Colors.white,
+                    size: 10,
+                    weight: FontWeight.w500,
+                    overflow: TextOverflow.ellipsis,
+                  ),
+                ),
+                if (onAdd != null)
+                  GestureDetector(
+                    onTap: onAdd,
+                    child: Container(
+                      decoration: const BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: Colors.white24,
+                      ),
+                      padding: const EdgeInsets.all(4),
+                      child: GestureDetector(
+                        onTap: onAdd,
+                          child: const Icon(Icons.add, size: 14, color: Colors.white)),
+                    ),
+                  ),
+              ],
+            ),
+          ),
+
+          /// Image on top of the brown container
+          Positioned(
+            top: 0,
+            left: 0,
+            right: 0,
+            child: Container(
+              height: 70,
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(15),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.grey.withOpacity(0.4),
+                    spreadRadius: 2,
+                    blurRadius: 5,
+                    offset: const Offset(0, 3),
+                  ),
+                ],
+              ),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(15),
+                child: Image.asset(
+                  imagePath,
+                  fit: BoxFit.cover,
+                  width: double.infinity,
+                  height: double.infinity,
+                ),
               ),
             ),
           ),
-          // Bottom Section
-          // Expanded(
-          //   child: Container(
-          //     decoration: const BoxDecoration(
-          //       color: Color(0xFF3D3838),
-          //       borderRadius: BorderRadius.only(
-          //         bottomLeft: Radius.circular(32),
-          //         bottomRight: Radius.circular(32),
-          //       ),
-          //     ),
-          //     child: Padding(
-          //       padding: const EdgeInsets.symmetric(horizontal: 20),
-          //       child: Row(
-          //         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          //         children: [
-          //           // Title
-          //           Text(
-          //             title,
-          //             style: const TextStyle(
-          //               color: Colors.white,
-          //               fontSize: 22,
-          //               fontWeight: FontWeight.w600,
-          //             ),
-          //           ),
-          //           // Add Button
-          //           GestureDetector(
-          //             onTap: onAdd,
-          //             child: Container(
-          //
-          //               decoration: BoxDecoration(
-          //                 color: const Color(0xFFE94A4A),
-          //                 shape: BoxShape.circle,
-          //                 boxShadow: [
-          //                   BoxShadow(
-          //                     color: const Color(0xFFE94A4A).withOpacity(0.4),
-          //                     blurRadius: 8,
-          //                     offset: const Offset(0, 4),
-          //                   ),
-          //                 ],
-          //               ),
-          //               child: const Icon(
-          //                 Icons.add,
-          //                 color: Colors.white,
-          //                 size: 28,
-          //               ),
-          //             ),
-          //           ),
-          //         ],
-          //       ),
-          //     ),
-          //   ),
-          // ),
         ],
       ),
     );
