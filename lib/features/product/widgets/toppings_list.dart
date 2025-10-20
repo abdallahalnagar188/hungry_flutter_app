@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:hungry_flutter_app/features/product/widgets/topping_card.dart';
 
+import '../../../utils/helper_functions.dart';
+
 class ToppingsList extends StatelessWidget {
   const ToppingsList({super.key});
 
@@ -17,7 +19,7 @@ class ToppingsList extends StatelessWidget {
           imagePath: 'assets/images/tomato.png',
           title: 'Tomato',
           onAdd: () {
-            print('Tomato added!');
+            THelperFunctions.showSnackBar('Added Tomato');
           },
         ),
       ),

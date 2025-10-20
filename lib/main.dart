@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'core/routes/app_pages.dart';
 import 'core/routes/app_routes.dart';
@@ -12,11 +13,14 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Hungry App',
-      initialRoute: AppRoutes.splash,
-      getPages: AppPages.routes,
+    return ScreenUtilInit(
+      designSize: const Size(375, 812),
+      builder: (context, child) => GetMaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: 'Hungry App',
+        initialRoute: AppRoutes.splash,
+        getPages: AppPages.routes,
+      ),
     );
   }
 }
