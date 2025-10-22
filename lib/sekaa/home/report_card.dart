@@ -8,13 +8,13 @@ class ReportCard extends StatelessWidget {
   final Color indicatorColor;
 
   const ReportCard({
-    Key? key,
+    super.key,
     this.width = 353,
     this.height = 72,
     this.title = 'تأخير في استلام المفاتيح',
     this.subtitle = 'زهرة الوادي للشقق المفروشه • 12/01/2025',
     this.indicatorColor = Colors.red,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
