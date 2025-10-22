@@ -26,6 +26,7 @@ class AppPages {
       name: AppRoutes.productDetails,
       page: () => const ProductDetailsView(),
       transition: Transition.rightToLeftWithFade,
+      transitionDuration: const Duration(milliseconds: 500),
     ),
   ];
 }
