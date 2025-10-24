@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hungry_flutter_app/core/constance/app_colors.dart';
 
 import '../../../shared/custom_text.dart';
@@ -23,28 +24,28 @@ class CardItem extends StatelessWidget {
       onTap:onPressed ,
       child: Card(
         elevation: 2,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.r)),
         child: Padding(
-          padding: const EdgeInsets.all(14.0),
+          padding:  EdgeInsets.symmetric(horizontal: 8,vertical: 6),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Center(child: Image.asset(image, height: 120, width: 120)),
-              CustomText(text: title, size: 18, weight: FontWeight.w500),
+              Center(child: Image.asset(image, height: 120.h, width: 120.w)),
+              CustomText(text: title, size: 18.sp, weight: FontWeight.w500),
               SizedBox(
-                width: 120,
+                width: 120.w,
                 child: CustomText(
                   text: desc,
-                  size: 14,
+                  size: 14.sp,
                   weight: FontWeight.w400,
                   overflow: TextOverflow.ellipsis,
                 ),
               ),
               Row(
                 children: [
-                  CustomText(text: 'Rate: $rate', size: 14, weight: FontWeight.w400),
+                  CustomText(text: 'Rate: $rate', size: 14.sp, weight: FontWeight.w400),
                   Spacer(),
-                  Icon(Icons.favorite, size: 24,color: AppColors.primary,),
+                  Icon(Icons.favorite, size: 24.sp,color: AppColors.primary,),
                 ],
               ),
             ],

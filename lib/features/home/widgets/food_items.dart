@@ -1,4 +1,5 @@
-import 'package:flutter/material.dart' ;
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import '../../../core/constance/app_images.dart';
 import '../../../core/routes/app_routes.dart';
@@ -9,11 +10,10 @@ class FoodItems extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  SliverPadding(
-      padding: EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+    return SliverPadding(
+      padding: EdgeInsets.symmetric(horizontal: 12.w, vertical: 10.h),
       sliver: SliverGrid(
-        delegate: SliverChildBuilderDelegate(
-            childCount: 8, (context, index,) {
+        delegate: SliverChildBuilderDelegate(childCount: 8, (context, index) {
           return CardItem(
             image: AppImages.splash,
             title: 'Pizza',
@@ -24,11 +24,11 @@ class FoodItems extends StatelessWidget {
             },
           );
         }),
-        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2,
-          crossAxisSpacing: 10,
-          mainAxisSpacing: 10,
-          childAspectRatio: 0.8,
+          crossAxisSpacing: 10.w,
+          mainAxisSpacing: 10.h,
+          mainAxisExtent: 220.h,
         ),
       ),
     );

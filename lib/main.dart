@@ -35,6 +35,10 @@ class MyApp extends StatelessWidget {
         title: 'Hungry App',
         initialRoute: AppRoutes.splash,
         getPages: AppPages.routes,
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
+          fontFamily: 'IBMPlexSansArabic',
+        ),
       ),
     );
   }
