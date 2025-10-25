@@ -1,10 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-
 import '../../../common/widgets/rounded_container.dart';
 import '../data/models/property_model.dart';
-
-import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
@@ -25,7 +21,7 @@ class Step2Details extends StatelessWidget {
     return Form(
       key: formKey,
       child: SingleChildScrollView(
-        padding: const EdgeInsets.all(16.0),
+        padding:  EdgeInsets.symmetric(horizontal: 16.w, vertical: 14.h),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -52,7 +48,7 @@ class Step2Details extends StatelessWidget {
                           isRequired: true,
                           initialValue: 2,
                           onSaved: (value) {
-                            // data.unitCount = value;
+                             data.unitCount = value;
                           },
                         ),
                         Gap(12.h),
@@ -61,7 +57,7 @@ class Step2Details extends StatelessWidget {
                           isRequired: true,
                           initialValue: 2,
                           onSaved: (value) {
-                            // data.guestCount = value;
+                             data.guestCount = value;
                           },
                         ),
                         Gap(12.h),
@@ -70,7 +66,7 @@ class Step2Details extends StatelessWidget {
                           isRequired: true,
                           initialValue: 2,
                           onSaved: (value) {
-                            // data.bathCount = value;
+                             data.bathCount = value;
                           },
                         ),
                         Gap(12.h),
@@ -79,7 +75,7 @@ class Step2Details extends StatelessWidget {
                           isRequired: true,
                           initialValue: 2,
                           onSaved: (value) {
-                            // data.minStayDays = value;
+                             data.minStayDays = value;
                           },
                         ),
                         Gap(12.h),
@@ -88,7 +84,7 @@ class Step2Details extends StatelessWidget {
                           isRequired: true,
                           initialValue: 2,
                           onSaved: (value) {
-                            // data.maxBookingDays = value;
+                             data.maxBookingDays = value;
                           },
                         ),
                         Gap(12.h),
@@ -98,7 +94,7 @@ class Step2Details extends StatelessWidget {
                           hint: 'ابدأ الطباعة...',
                           keyboardType: TextInputType.number,
                           onSaved: (value) {
-                            // data.propertyArea = value;
+                             data.propertyArea = value;
                           },
                         ),
 
@@ -158,7 +154,6 @@ class Step2Details extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-
                         Text(
                           'لا يوجد غرف حتى الآن',
                           style: TextStyle(
@@ -253,20 +248,20 @@ class Step2Details extends StatelessWidget {
                         TimeRangePicker(
                           sectionLabel: 'وقت الوصول',
                           onFromSaved: (time) {
-                            // data.checkInFrom = time;
+                             data.checkInFrom = time;
                           },
                           onToSaved: (time) {
-                            // data.checkInTo = time;
+                             data.checkInTo = time;
                           },
                         ),
                         Gap(16.h),
                         TimeRangePicker(
                           sectionLabel: 'وقت المغادرة',
                           onFromSaved: (time) {
-                            // data.checkOutFrom = time;
+                             data.checkOutFrom = time;
                           },
                           onToSaved: (time) {
-                            // data.checkOutTo = time;
+                             data.checkOutTo = time;
                           },
                         ),
                       ],
@@ -300,31 +295,31 @@ class Step2Details extends StatelessWidget {
                         ToggleFormField(
                           label: 'التدخين مسموح',
                           onSaved: (value) {
-                            // data.allowSmoking = value;
+                             data.allowSmoking = value;
                           },
                         ),
                         ToggleFormField(
                           label: 'يسمح بدخول الحيوانات الأليفة',
                           onSaved: (value) {
-                            // data.allowPets = value;
+                             data.allowPets = value;
                           },
                         ),
                         ToggleFormField(
                           label: 'يسمح بالحفلات والمناسبات',
                           onSaved: (value) {
-                            // data.allowParties = value;
+                             data.allowParties = value;
                           },
                         ),
                         ToggleFormField(
                           label: 'يسمح باصطحاب الأطفال',
                           onSaved: (value) {
-                            // data.allowChildren = value;
+                             data.allowChildren = value;
                           },
                         ),
                         ToggleFormField(
                           label: 'للعوائل فقط',
                           onSaved: (value) {
-                            // data.familiesOnly = value;
+                             data.familiesOnly = value;
                           },
                         ),
                       ],
@@ -358,7 +353,7 @@ class Step2Details extends StatelessWidget {
                           'المدة المسموح بها لإلغاء الحجز قبل تاريخ وصول المستأجر (بالأيام)',
                           initialValue: 1,
                           onSaved: (value) {
-                            // data.cancellationDays = value;
+                             data.cancellationDays = value;
                           },
                         ),
                       ],
@@ -596,6 +591,7 @@ class CounterCancelFormField extends FormField<int> {
     },
   );
 }
+
 class CustomTextFormField extends StatelessWidget {
   final String label;
   final String? hint;
@@ -741,6 +737,7 @@ class ToggleFormField extends FormField<bool> {
     },
   );
 }
+
 class TimeRangePicker extends StatelessWidget {
   final String sectionLabel;
   final FormFieldSetter<TimeOfDay>? onFromSaved;

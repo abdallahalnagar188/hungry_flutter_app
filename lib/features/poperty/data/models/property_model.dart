@@ -1,4 +1,6 @@
 
+import 'package:flutter/material.dart';
+
 class PropertyData {
   // Step 1
   String? propertyType;
@@ -13,14 +15,25 @@ class PropertyData {
   String? propertyArea;
 
   // Step 2 (8 fields)
-  String? field2_1;
-  String? field2_2;
-  String? field2_3;
-  String? field2_4;
-  String? field2_5;
-  String? field2_6;
-  String? field2_7;
-  String? field2_8;
+ int? unitCount;
+  int? guestCount;
+  int? bathCount;
+  int? minStayDays;
+  int? maxBookingDays;
+  TimeOfDay? checkInFrom;
+  TimeOfDay? checkInTo;
+  TimeOfDay? checkOutFrom;
+  TimeOfDay? checkOutTo;
+  bool? allowSmoking;
+  bool? allowPets;
+  bool? allowParties;
+  bool? allowChildren;
+  bool? familiesOnly;
+  int? cancellationDays;
+
+
+
+
 
   // Step 3 (8 fields)
   String? field3_1;
@@ -55,9 +68,6 @@ class PropertyData {
       'Region': region,
       'Location': locationOnMap ?? 'Not Set',
       'Property Area': propertyArea,
-      'Step 2 - Field 1': field2_1,
-      'Step 2 - Field 2': field2_2,
-      'Step 4 - Field 8': field4_8,
     };
   }
 }
