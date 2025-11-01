@@ -6,6 +6,7 @@ import 'package:hungry_flutter_app/sekaa/home/last_booking_item.dart';
 import 'package:hungry_flutter_app/sekaa/home/report_card.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import '../../../sekaa/chat/date_range_bottom_sheet.dart';
 import '../../../sekaa/home/booking_car.dart';
 import '../../../sekaa/home/last_booking_list.dart';
 import '../../../sekaa/home/last_tenant_item.dart';
@@ -80,6 +81,18 @@ class CartView extends StatelessWidget {
                   ),
                 );
               },
+            ),
+            Gap(20),
+            // In your screen/widget
+            ElevatedButton(
+              onPressed: () {
+                showModalBottomSheet(
+                  context: context,
+                  isScrollControlled: true,
+                  builder: (context) => const DateRangePickerBottomSheet(),
+                );
+              },
+              child: const Text('Open Date Picker'),
             ),
             BookingsCard(),
             LastBookingItem(),
