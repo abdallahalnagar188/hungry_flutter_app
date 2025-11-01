@@ -21,7 +21,7 @@ dependencies:
   persistent_bottom_nav_bar: ^6.2.1
   pie_chart: ^5.4.0
   shared_preferences: ^2.2.2
-
+  flutter_chat_bubble: ^2.0.0
 dev_dependencies:
   flutter_test:
     sdk: flutter

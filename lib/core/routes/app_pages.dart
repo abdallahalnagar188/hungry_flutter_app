@@ -1,6 +1,7 @@
 import 'package:get/get.dart';
 import 'package:hungry_flutter_app/features/auth/views/login_view.dart';
 import 'package:hungry_flutter_app/root.dart';
+import 'package:hungry_flutter_app/sekaa/chat/chat_page.dart';
 import 'package:hungry_flutter_app/splash.dart';
 import '../../features/auth/views/signup_view.dart';
 import '../../features/product/views/product_details_view.dart';
@@ -16,6 +17,7 @@ class AppPages {
     ),
     GetPage(name: AppRoutes.login, page: () => const LoginView()),
     GetPage(name: AppRoutes.register, page: () => const SignupView()),
+    GetPage(name: AppRoutes.chat, page: () => const ChatScreen()),
     GetPage(
       name: AppRoutes.root,
       page: () => const Root(),

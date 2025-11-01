@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:hungry_flutter_app/sekaa/chat/chat_page.dart';
 import '../../../core/constance/app_images.dart';
 import '../../../core/routes/app_routes.dart';
 import 'card_item.dart';
@@ -20,7 +21,7 @@ class FoodItems extends StatelessWidget {
             desc: 'Lorem ipsum dolor sit amet,',
             rate: '4.5',
             onPressed: () {
-              Get.toNamed(AppRoutes.productDetails);
+              Get.to(() => ChatScreen());
             },
           );
         }),

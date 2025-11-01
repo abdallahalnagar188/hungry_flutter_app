@@ -21,7 +21,7 @@ Future<void> main() async {
 class MyApp extends StatelessWidget {
   final Locale savedLocale;
 
-  MyApp({super.key, required this.savedLocale});
+  const MyApp({super.key, required this.savedLocale});
 
   @override
   Widget build(BuildContext context) {

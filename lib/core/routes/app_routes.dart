@@ -5,6 +5,7 @@ class AppRoutes {
   static const root = '/root';
   static const home = '/home';
   static const cart = '/cart';
+  static const chat = '/chat';
   static const orderHistory = '/orderHistory';
   static const profile = '/profile';
 
